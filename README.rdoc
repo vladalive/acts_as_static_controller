@@ -1,0 +1,34 @@
+= ActsAsStaticController
+
+Creates StaticPages Controller to serve static pages.
+
+== Install
+
+Install Ruby Gem:
+  gem install acts_as_static_controller
+
+Add to /config/environment.rb
+  config.gem "acts_as_static_controller"
+
+Or install as a plugin:
+  ruby script/plugin install git://github.com/vladalive/acts_as_static_controller.git
+
+Configure routes:
+  /config/routes.rb:
+  map.static_pages # place after all routes
+
+Create your static pages views at:
+  /views/static_pages/**/*
+
+Use name convention:
+  view: /somepage.html.erb or /somepage/index.html.erb
+  route generated: /somepage or /somepage/
+  link: link_to static_page("somepage")
+
+== Examples
+  name.html.erb => /name
+  folder/two.html.erb => /folder/two
+  folder/two/index.html.erb => /folder/two
+
+== Copyright
+Copyright (c) 2009 Vlad Alive (http://vladalive.com), released under the MIT license

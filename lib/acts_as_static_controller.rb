@@ -1,0 +1,2 @@
+require 'acts_as_static_controller/acts_as_static_controller'
+require 'acts_as_static_controller/routing'
